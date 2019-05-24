@@ -1,0 +1,4 @@
+---
+- name: Run datacenters
+  import_role:
+    name: vmware.infra/roles/vmware.datacenters

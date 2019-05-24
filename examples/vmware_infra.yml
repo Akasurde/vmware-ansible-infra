@@ -1,0 +1,10 @@
+---
+- name: VMware infra
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  #vars_files:
+  #  - vars/vmware_infra_vars.yml
+
+  roles:
+    - vmware.datacenters

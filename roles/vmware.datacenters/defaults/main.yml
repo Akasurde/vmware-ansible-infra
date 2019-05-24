@@ -1,0 +1,9 @@
+---
+# defaults file for vmware.datacenters
+datacenter_state: 'present'
+recursive_cleanup: false
+datacenter: Asia-Datacenter1
+vcenter_hostname: 10.65.200.221
+vcenter_username: administrator@vsphere.local
+vcenter_password: Esxi@123$%
+validate_certs: no

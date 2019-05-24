@@ -1,0 +1,24 @@
+---
+- name: Create a datacenter
+  vmware_datacenter:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: "{{ validate_certs }}"
+    datacenter_name: "{{ datacenter }}"
+  when: datacenter_state == 'present'
+  tags:
+    - datacenters
+
+- name: Remove a datacenter
+  vmware_datacenter:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: "{{ validate_certs }}"
+    datacenter_name: "{{ datacenter }}"
+    state: absent
+  when: datacenter_state == 'absent'
+  tags:
+    - datacenters
+
